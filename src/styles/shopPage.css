@@ -1,0 +1,18 @@
+.shop-page {
+  border: 1px solid red;
+  height: 90vh;
+}
+
+.shop-nav {
+  border: 1px solid green;
+  height: 10%;
+}
+
+.shop-main {
+  border: 1px solid blue;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr)) ;
+  gap: 8px;
+}
+
