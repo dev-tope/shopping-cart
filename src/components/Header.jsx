@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cart from "./Cart";
+import CartImg from "./Cart";
 import AppNav from "./AppNav"
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
         <AppNav />
       </div>
       <div>
-        <Cart />
+        <CartImg />
       </div>
     </div>
   )

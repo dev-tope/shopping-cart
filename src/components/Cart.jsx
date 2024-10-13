@@ -1,12 +1,9 @@
-const Cart = ({ orderCount }) => {
-
-  
-
+const CartImg = ({ orderCount }) => {
   return (
     <div className="cart-img">
-      <div className="order-count">{orderCount}</div>
+      <div className="order-count">Cart {orderCount}</div>
     </div>
   )
 }
 
-export default Cart;
+export default CartImg;

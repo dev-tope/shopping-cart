@@ -1,6 +1,6 @@
 import '../styles/productCard.css'
 
-const ProductCard = ({ img,title, price, }) => {
+const ProductCard = ({ onClick, id, img,title, price, }) => {
   return (
     <div className='card'>
       <div className="product-img">
@@ -9,9 +9,9 @@ const ProductCard = ({ img,title, price, }) => {
       <div>
         <div className="product-info">
           <h4>{title}</h4>
-          <p>{price}</p>
+          <p>${price}</p>
         </div>
-        <button>Add To Cart</button>
+        <button onClick={onClick}>Add To Cart</button>
       </div>
     </div>
   )
