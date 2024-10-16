@@ -1,0 +1,17 @@
+.headerDiv {
+  /* border: 1px solid red; */
+  /* width: 80%; */
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid #7f5af0;
+
+}
+
+.headerNav {
+  /* border: 1px solid blue; */
+  width: 100%;
+}
+
+

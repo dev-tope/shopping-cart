@@ -1,5 +1,6 @@
 import { Children } from "react";
 import App from "./App";
+import Homepage from "./components/Homepage";
 import ShopPage from "./components/ShopPage";
 import ErrorPage from "./components/ErrorPage";
 import CartPage from "./components/CartPage";
@@ -10,9 +11,13 @@ const routes = [
     element: <App />,
     errorElement: <ErrorPage />
   },
+  // {
+  //   path: "/:name",
+  //   element: <Homepage />
+  // },
   {
-    path: "shop",
-    element: <ShopPage />,
+    path: "/:name",
+    element: <App />,
     children: [
       {
         path: "cart",

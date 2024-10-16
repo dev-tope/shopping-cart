@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
+import styles from "../styles/appNav.module.css";
+
 const AppNav = () => {
   return (
-  <nav>
+  <nav className={`${styles.appNav}`}>
     <ul>
-      <l1>Home</l1>
-      <l1>Market</l1>
-      <l1>Products</l1>
-      <l1>About</l1>
+      <li><Link to=".." className={`${"noTd"} ${styles.link}`}>Home</Link></li>
+      <li><Link to="" className={`${"noTd"} ${styles.link}`}>Shop</Link></li>
+      <li><Link to="" className={`${"noTd"} ${styles.link}`}>Products</Link></li>
+      <li><Link to="" className={`${"noTd"} ${styles.link}`}>About</Link></li>
     </ul>
   </nav>
   )

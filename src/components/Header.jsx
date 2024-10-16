@@ -2,14 +2,17 @@ import { useState } from "react";
 import CartImg from "./Cart";
 import AppNav from "./AppNav"
 
+import styles from "../styles/header.module.css"
+import navStyles from "../styles/appNav.module.css"
+
 const Header = () => {
   return (
-    <div>
+    <div className={`${styles.headerDiv} ${navStyles.header} ${"bg"}`} >
       <div>
-        <h1>Store Name</h1>
+        <h1 className="fontXL bold hd">UrbanAura</h1>
       </div>
-      <div>
-        <AppNav />
+      <div className={`${styles.headerNav}`}>
+        <AppNav/>
       </div>
       <div>
         <CartImg />
