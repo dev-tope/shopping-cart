@@ -3,6 +3,8 @@ import { useOutletContext } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CartCard from "./CartCard";
 
+import styles from "../styles/cartpage.module.css"
+
 const CartPage = () => {
   const [cart, setCart] = useOutletContext();
 
@@ -48,7 +50,7 @@ const CartPage = () => {
     setCart(cart.filter(item => item.id !== id));
   }
   return (
-    <div>
+    <div className={`${styles.cartpage}`}>
       {cart.length === 0 ? 
         <div> 
           <h2>There are no items in your cart</h2> 
@@ -56,26 +58,31 @@ const CartPage = () => {
         </div>  
         :
         <div>
-          <h1>Items in your cart</h1>
-          <Link to=".."><button>Close Cart</button></Link>
-          {cart.map((item, index) => {
-            console.log(item)
-            if(!item) {
-              console.log("no item in cart array")
-              return null
+          <div className={`${styles.title}`}>
+            <h1>Items in your cart</h1>
+            <Link to=".."><button>Close Cart</button></Link>
+          </div>
+          <div className={`${styles.cardsDiv}`}>
+            {cart.map((item, index) => {
+              console.log(item)
+              if(!item) {
+                console.log("no item in cart array")
+                return null
+              }
+              return <CartCard 
+                key={index}
+                img={`${item.image}`}
+                title={item.title} 
+                price={item.price} 
+                quantity={item.quantity}
+                decrease={() => decreaseQuantity(item)}
+                increase={() => increaseQuantity(item)}
+                remove={() => removeFromCart(item.id)}
+              />
+            })
             }
-            return <CartCard 
-              key={index}
-              title={item.title} 
-              price={item.price} 
-              quantity={item.quantity}
-              decrease={() => decreaseQuantity(item)}
-              increase={() => increaseQuantity(item)}
-              remove={() => removeFromCart(item.id)}
-            />
-          })
-          }
-          <div>
+          </div>
+          <div className={`${styles.lower}`}>
             <br />
             <button onClick={() => clearCart()}>Clear Cart</button>
             <h3>Total: ${totalPrice}</h3>

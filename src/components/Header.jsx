@@ -1,21 +1,22 @@
 import { useState } from "react";
-import CartImg from "./Cart";
-import AppNav from "./AppNav"
-
+import AppNav from "./AppNav";
 import styles from "../styles/header.module.css"
 import navStyles from "../styles/appNav.module.css"
 
-const Header = () => {
+
+
+const Header = ({ onClick }) => {
   return (
-    <div className={`${styles.headerDiv} ${navStyles.header} ${"bg"}`} >
-      <div>
-        <h1 className="fontXL bold hd">UrbanAura</h1>
+    <div className={`${styles.header} ${navStyles.header}`}>
+      <div className={`${styles.title}`}>
+        <h1>UrbanAura</h1>
       </div>
-      <div className={`${styles.headerNav}`}>
+      <div>
         <AppNav/>
       </div>
-      <div>
-        <CartImg />
+      <div className={`${styles.cart}`}>
+        <img src="src/assets/cart.png" alt="cat icon" className={`${styles.img}`} onClick={onClick}/>
+        <div className={`${styles.cartItemCount}`} ><span>3</span></div>
       </div>
     </div>
   )

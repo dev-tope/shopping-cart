@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid blue;
+  height: 300px;
+  max-width: 300px;
+  /* display: grid; */
+}
+
+.prodImg {
+  border: 1px solid red;
+  height: 70%;
+  width: 90%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+}

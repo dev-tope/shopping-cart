@@ -1,0 +1,16 @@
+.shopDiv {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.left {
+  display: grid;
+  grid-template-rows: auto 5fr;
+}
+
+.productsDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}

@@ -1,20 +1,28 @@
 .footer {
-  /* border: 1px solid red; */
+  border: 1px solid blue;
+  max-height: 120px;
+  min-height: 120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
+   .title {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .socials {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .socialsLink {
+    /* border: 3px solid yellow; */
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
 }
 
-.social {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.social ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}

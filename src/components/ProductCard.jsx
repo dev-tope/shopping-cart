@@ -1,13 +1,13 @@
-import '../styles/productCard.css'
+import styles from "../styles/productcard.module.css"
 
-const ProductCard = ({ onClick, id, img,title, price, }) => {
+const ProductCard = ({ onClick, id, img, title, price, description }) => {
   return (
-    <div className='card'>
-      <div className="product-img">
-        <img src={img} alt="" />
+    <div className={`${styles.card}`}>
+      <div className={`${styles.prodImg}`}>
+        <img src={img} alt={description}/>
       </div>
-      <div>
-        <div className="product-info">
+      <div className={`${styles.lowerCard}`}>
+        <div className={`${styles.prodDetails}`}>
           <h4>{title}</h4>
           <p>${price}</p>
         </div>
