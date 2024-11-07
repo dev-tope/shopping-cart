@@ -12,17 +12,17 @@ import './App.css'
 function App() {
   const [isCartOpened, setISCartOpened] = useState(false)
 
-  // const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([])
   
-  // function addItemToCart(newItem) {
-  //   setCart((prevCart) => {
-  //     const itemExists = prevCart.some((item) => item.id === newItem.id);
-  //     if(itemExists) {
-  //       return prevCart;
-  //     }
-  //     return [...prevCart, {...newItem, quantity: 1}]
-  //   });
-  // }
+  const addItemToCart = (newItem) => {
+    setCart((prevCart) => {
+      const itemExists = prevCart.some((item) => item.id === newItem.id);
+      if(itemExists) {
+        return prevCart;
+      }
+      return [...prevCart, {...newItem, quantity: 1}]
+    });
+  }
 
   function toggleCartView() {
     setISCartOpened(prevState => !prevState)
@@ -32,10 +32,15 @@ function App() {
 
   return (
     <div className="container">
-      <Header onClick={() => toggleCartView()}/>
+      <Header cartLength={cart.length} iconClick={() => toggleCartView()}/>
       {name === "shop" ? (
         // <ShopPage isCartOpened={ isCartOpened } cart={ cart } onClick={() => addItemToCart(item)} />
-        <ShopPage isCartOpened={ isCartOpened }  />
+        <ShopPage 
+          cart={cart} 
+          setCart={setCart} 
+          onAddToCart={ addItemToCart } 
+          isCartOpened={ isCartOpened }  
+        />
       ) : (
         <Homepage />
       )}

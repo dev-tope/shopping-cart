@@ -5,8 +5,7 @@ import CartCard from "./CartCard";
 
 import styles from "../styles/cartpage.module.css"
 
-const CartPage = () => {
-  const [cart, setCart] = useOutletContext();
+const CartPage = ({cart, setCart}) => {
 
   const [totalPrice, setTotalPrice] = useState(0);
 

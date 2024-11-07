@@ -7,30 +7,29 @@ import Header from "./Header"
 
 import styles from "../styles/shoppage.module.css"
 
-const ShopPage = ({ isCartOpened }) => {
+const ShopPage = ({cart, setCart, onAddToCart, isCartOpened }) => {
   const { products, error, loading} = useProducts();
 
   const [categories, setCategories] = useState(null);
 
-  const [cart, setCart] = useState([])
+  // const [cart, setCart] = useState([])
 
   
 
   function changeCategory(name) {
     setCategories(name)
   }
-
   
 
-  function addItemToCart(newItem) {
-    setCart((prevCart) => {
-      const itemExists = prevCart.some((item) => item.id === newItem.id);
-      if(itemExists) {
-        return prevCart;
-      }
-      return [...prevCart, {...newItem, quantity: 1}]
-    });
-  }
+  // function addItemToCart(newItem) {
+  //   setCart((prevCart) => {
+  //     const itemExists = prevCart.some((item) => item.id === newItem.id);
+  //     if(itemExists) {
+  //       return prevCart;
+  //     }
+  //     return [...prevCart, {...newItem, quantity: 1}]
+  //   });
+  // }
 
   if(loading) return <p>Loading...</p>
   if(error) return <p>There was an error loading resources</p>
@@ -39,7 +38,7 @@ const ShopPage = ({ isCartOpened }) => {
 
   console.log("is cart opened", isCartOpened)
 
-  console.log(cart)
+  // console.log(cart)
   return (
     <div className={`${styles.shopDiv}`}>
       <div className={`${styles.left}`}>
@@ -52,7 +51,7 @@ const ShopPage = ({ isCartOpened }) => {
             <button id="women's clothing" onClick={() => changeCategory("women's clothing")}>Women's Clothing</button>
           </nav>
           <nav>
-            <Link to="cart" onClick={() => toggleCartView()}><button>Cart <span> : {cart.length}</span></button></Link>
+            {/* <Link to="cart" onClick={() => toggleCartView()}><button>Cart <span> : {cart.length}</span></button></Link> */}
           </nav>
         </div>
         <div className={`${styles.productsDiv}`}>
@@ -65,15 +64,14 @@ const ShopPage = ({ isCartOpened }) => {
                 img={`${item.image}`}
                 title={item.title} 
                 price={item.price}
-                onClick={() => addItemToCart(item)}
-                // onClick={() => onClick(item)}
+                onClick={() => onAddToCart(item)}
               />
           })}
         </div>
       </div>
       { isCartOpened &&
         <div id="cart-div">
-          <Outlet context={ [cart, setCart] }/>
+          <CartPage cart={cart} setCart={setCart} />
         </div>
       }
     </div>
