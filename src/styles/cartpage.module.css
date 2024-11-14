@@ -1,17 +1,86 @@
 .cartpage {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  border-left: 2px solid #242629;
   max-width: 400px;
   min-width: 400px;
+  min-height: 100%;
   /* background-color: yellowgreen; */
+  /* background-color: #f2eef5; */
+  /* background-color: #94a1b2 */
   display: grid;
   grid-template-rows: auto auto auto;
 }
 
 .cardsDiv {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 15px;
 }
 
+.CartNotifDiv {
+  /* border: 1px solid blue; */
+  padding: 5px 8px;
+    h2 {
+      /* border: 1px solid red; */
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+      /* padding: 5px; */
+    }
+    button {
+      background-color: #FF5733 ;
+      border: none;
+      padding: 5px;
+      width: 25%;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+    }
+}
+
+.lower {
+  padding: 10px 10px;
+  /* border: 1px solid red; */
+  height: 15%;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+    .clearBtn{
+      border: 1px solid black;
+      background-color: black;
+      color: white;
+      width: 20%;
+    }
+    h3 {
+      /* border: 1px solid red; */
+      min-height: 30% ;
+      display: flex;
+      flex-direction: row;
+      /* justify-content: center; */
+      align-items: center;
+      font-size: 1.2rem;
+        span {
+          font-weight: bold;
+          color: red;
+        }
+    }
+    .checkOutBtn {
+      width: 30%;
+      padding: 8px 0;
+      color: white;
+      background-color: #2cb67d;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+         &:hover{
+          transform: scale(1.02);
+         }
+    }
+}

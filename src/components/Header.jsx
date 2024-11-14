@@ -16,7 +16,10 @@ const Header = ({ cartLength, iconClick }) => {
       </div>
       <div className={`${styles.cart}`}>
         <img src="src/assets/cart.png" alt="cat icon" className={`${styles.img}`} onClick={iconClick}/>
-        <div className={`${styles.cartItemCount}`} ><span>{cartLength}</span></div>
+        {
+          cartLength > 0 &&
+          <div className={`${styles.cartItemCount}`} ><div>{cartLength}</div></div>
+        }
       </div>
     </div>
   )

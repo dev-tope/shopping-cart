@@ -5,7 +5,7 @@ import CartCard from "./CartCard";
 
 import styles from "../styles/cartpage.module.css"
 
-const CartPage = ({cart, setCart}) => {
+const CartPage = ({cart, setCart, click}) => {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -51,15 +51,15 @@ const CartPage = ({cart, setCart}) => {
   return (
     <div className={`${styles.cartpage}`}>
       {cart.length === 0 ? 
-        <div> 
+        <div className={`${styles.CartNotifDiv}`}> 
           <h2>There are no items in your cart</h2> 
-          <Link to=".."><button>Close Cart</button></Link>
+          <button onClick={ click }>Close Cart</button>
         </div>  
         :
         <div>
-          <div className={`${styles.title}`}>
-            <h1>Items in your cart</h1>
-            <Link to=".."><button>Close Cart</button></Link>
+          <div className={`${styles.CartNotifDiv}`}>
+            <h2>Items in your cart</h2>
+            <button onClick={ click }>Close Cart</button>
           </div>
           <div className={`${styles.cardsDiv}`}>
             {cart.map((item, index) => {
@@ -82,10 +82,10 @@ const CartPage = ({cart, setCart}) => {
             }
           </div>
           <div className={`${styles.lower}`}>
-            <br />
-            <button onClick={() => clearCart()}>Clear Cart</button>
-            <h3>Total: ${totalPrice}</h3>
-            <button>Checkout</button>
+            {/* <br /> */}
+            <button onClick={() => clearCart()} className={`${styles.clearBtn}`}>Clear Cart</button>
+            <h3>Total: <span>{`$${totalPrice}`}</span></h3>
+            <button className={`${styles.checkOutBtn}`}>Checkout</button>
           </div>
         </div>
     }

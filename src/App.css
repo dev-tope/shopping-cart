@@ -3,4 +3,65 @@
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+
+  /* To prevent Overlap */
+  
 }
+
+/* TYPOGRAPHY */ 
+
+.fontXL {
+  font-size: 2.5rem;
+}
+
+.fontL {
+  font-size: 2rem;
+}
+
+.fontM {
+  font-size: 1.5rem;
+}
+
+.fontS {
+  font-size: 1.2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* COLOR */
+
+.bgMain {
+  background-color: #16161a;
+}
+
+.bgHigh {
+  background-color: #7f5af0;
+}
+
+.bgSec {
+  background-color: #242629;
+}
+
+.bgTet {
+  background-color: #2cb67d;
+}
+
+.bgBtn {
+  background-color: #7f5af0;
+}
+
+.headline {
+  color: #fffffe;
+}
+
+.paragraph {
+  color: #94a1b2;
+}
+
+
+.btnTxt {
+  color: #fffffe;
+}
+

@@ -11,7 +11,7 @@ const ProductCard = ({ onClick, id, img, title, price, description }) => {
           <h4>{title}</h4>
           <p>${price}</p>
         </div>
-        <button onClick={onClick}>Add To Cart</button>
+        <button onClick={onClick} className={styles.addToCartBtn}>Add To Cart</button>
       </div>
     </div>
   )

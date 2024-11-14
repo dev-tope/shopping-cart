@@ -1,16 +1,23 @@
 .homepage {
   /* border: 1px solid red; */
+  /* height: ; */
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  /* margin-top: 100px; */
 }
 
 .left {
   /* border: 1px solid red; */
+  /* composes: bgMain from '../App'; */
+  /* background-color: #16161a; */
   display: flex;
   flex-direction: column;
   justify-content: center;
     .inner {
       /* border: 1px solid blue; */
+      border-radius: 0 80px 80px 0;
+      /* background-color: #7f5af0; */
+      padding: 0 100px;
       height: 40%;
       display: flex;
       flex-direction: column;
@@ -18,17 +25,57 @@
     }
 }
 
+.title {
+  composes: fontXL from '../App.css';
+  /* composes: bg from '../App.css'; */
+  
+  color: #16161a;
+  font-weight: bold;
+}
+
+.text {
+  /* border: 1px solid red; */
+  width: 70%;
+  composes: fontS from '../App.css';
+  /* composes: paragraph from '../App.css'; */
+  text-align: justify;
+  line-height: 20px;
+}
+
+.btnToShop {
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  height: 100%;
+  padding: 8px 0;
+  composes: fontS from '../App.css';
+  composes: bgBtn from '../App.css';
+  
+  composes: btnTxt from '../App.css';
+  font-weight: bold;
+    &:hover {
+      transform: scale(1.02);
+    }
+
+}
 
 .right {
   /* border: 1px solid red; */
+  /* composes:  from '../App'; */
+  /* background-color: #16161a; */
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
     .img {
-      /* border: 1px solid blue; */
+      background-image: url(src/assets/home-img.png);
+      /* background-color: #010101; */
+      /* background-position: ; */
+      background-repeat: no-repeat;
+      /* border: 3px solid #7f5af0; */
+      /* border-radius: 5%; */
       height: 70%;
-      width: 50%;
+      width: 100%;
     }
 }
 

@@ -37,7 +37,8 @@ function App() {
         // <ShopPage isCartOpened={ isCartOpened } cart={ cart } onClick={() => addItemToCart(item)} />
         <ShopPage 
           cart={cart} 
-          setCart={setCart} 
+          setCart={setCart}
+          click = {() => toggleCartView()}
           onAddToCart={ addItemToCart } 
           isCartOpened={ isCartOpened }  
         />

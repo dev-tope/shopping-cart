@@ -9,19 +9,19 @@ const Homepage = () => {
       
       <div className={`${styles.left}`}>
         <div className={`${styles.inner}`}>
-          <h2>UrbanAura</h2>
-          <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          <h2 className={`${styles.title}`}>UrbanAura</h2>
+          <p className={`${styles.text}`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Vero natus veniam repellat voluptates, vitae, aut eligendi 
             blanditiis labore dolorum, deleniti facere vel iste voluptatibus 
             accusantium quidem assumenda nam ad necessitatibus.
           </p>
-          <Link to="shop"><button>Shop Now</button></Link>
+          <Link to="shop"><button className={`${styles.btnToShop}`}>Shop Now</button></Link>
         </div>
       </div> 
     
       <div className={`${styles.right}`}>
         <div className={`${styles.img}`}>
-            img
+            
         </div>
       </div>
      

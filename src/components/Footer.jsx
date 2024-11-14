@@ -6,17 +6,17 @@ const Footer = () => {
   return (
     <div className={`${styles.footer}`}>
       <div className={`${styles.title}`}>
-        <h2>UrbanAura</h2>
+        <h2 className={`${styles.titleName}`}>UrbanAura</h2>
       </div>
       <nav className={`${navStyles.footer}`}>
         <AppNav />
       </nav>
       <div className={`${styles.socials}`}>
-         <h3>Socials</h3>
+         <h3 className={`${styles.socialsTitle}`}>Socials</h3>
          <ul className={`${styles.socialsLink}`}>
-          <l1>twitter</l1>
-          <l1>instagram</l1>
-          <l1>tiktok</l1>
+          <img src="src/assets/fb.png" alt="facebook icon" />
+          <img src="src/assets/ig.png" alt="instagram icon" />
+          <img src="src/assets/tiktok.png" alt="tikto icon" />
          </ul>
       </div>
 

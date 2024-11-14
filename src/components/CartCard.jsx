@@ -9,8 +9,8 @@ const CartCard = ( {title, img, price, description,  quantity, decrease, increas
       </div>
       <div className={`${styles.prodInfo}`}>
         <div className={`${styles.prodDetails}`}>
-          <div>{title}</div>
-          <div>${price}</div>
+          <div className={`${styles.cardTitle}`}>{title}</div>
+          <div className={`${styles.cardPrice}`}>${price}</div>
         </div>
         <div className={`${styles.lower}`}>
           <div className={`${styles.remove}`}>
