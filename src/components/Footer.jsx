@@ -14,9 +14,9 @@ const Footer = () => {
       <div className={`${styles.socials}`}>
          <h3 className={`${styles.socialsTitle}`}>Socials</h3>
          <ul className={`${styles.socialsLink}`}>
-          <img src="src/assets/fb.png" alt="facebook icon" />
-          <img src="src/assets/ig.png" alt="instagram icon" />
-          <img src="src/assets/tiktok.png" alt="tikto icon" />
+          <img src="./fb.png" alt="facebook icon" />
+          <img src="./ig.png" alt="instagram icon" />
+          <img src="./tiktok.png" alt="tikto icon" />
          </ul>
       </div>
 

@@ -68,7 +68,7 @@
   justify-content: center;
   align-items: center;
     .img {
-      background-image: url(src/assets/home-img.png);
+      background-image: url(./home-img.png);
       /* background-color: #010101; */
       /* background-position: ; */
       background-repeat: no-repeat;

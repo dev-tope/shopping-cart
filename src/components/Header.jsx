@@ -15,7 +15,7 @@ const Header = ({ cartLength, iconClick }) => {
         <AppNav/>
       </div>
       <div className={`${styles.cart}`}>
-        <img src="src/assets/cart.png" alt="cat icon" className={`${styles.img}`} onClick={iconClick}/>
+        <img src="./cart.png" alt="cat icon" className={`${styles.img}`} onClick={iconClick}/>
         {
           cartLength > 0 &&
           <div className={`${styles.cartItemCount}`} ><div>{cartLength}</div></div>
